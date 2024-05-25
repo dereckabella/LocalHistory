@@ -1,0 +1,11 @@
+﻿@model IEnumerable<LocalHistory.Models.Document>
+
+<h2>Documents</h2>
+
+@foreach (var document in Model)
+{
+    <div>
+        <h3>@document.Title</h3>
+        <a href="@document.FilePath">Download Document</a>
+    </div>
+}

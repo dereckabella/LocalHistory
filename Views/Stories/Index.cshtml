@@ -1,0 +1,15 @@
+﻿@model IEnumerable<LocalHistory.Models.Story>
+
+<h2>Stories</h2>
+
+@foreach (var story in Model)
+{
+    <div>
+        <h3>@story.Title</h3>
+        <p>@story.Content</p>
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Create", "Stories")" class="btn btn-primary">Publish a Story</a>
+</div>

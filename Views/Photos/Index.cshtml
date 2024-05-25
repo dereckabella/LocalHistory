@@ -1,0 +1,15 @@
+﻿@model IEnumerable<LocalHistory.Models.Photo>
+
+<h2>Photos</h2>
+
+@foreach (var photo in Model)
+{
+    <div>
+        <h3>@photo.Title</h3>
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(photo.ImageData)" alt="@photo.Title" />
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Create", "Photos")" class="btn btn-primary">Post Old Photo</a>
+</div>
